@@ -112,7 +112,7 @@ with app.app_context():
 
 | ![Gambar 1](image/web-login.png) | ![Gambar 2](image/web-doto.png)|
 |---|---|
-| login |terminal |
+| login |doto |
 
 | ![Gambar 1](image/daftar-tugas.png) | ![Gambar 2](image/databes-username-dan-password.png)|
 |---|---|
