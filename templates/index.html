@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Steganography Tool</h2>
+        <h3>Hide File</h3>
+        <label for="hideImage">Select an image to hide the files in:</label>
+        <input type="file" id="hideImage" accept="image/*">
+        
+        <label>Select up to 4 files to hide:</label>
+        <input type="file" id="hideFile1">
+        <input type="file" id="hideFile2">
+        <input type="file" id="hideFile3">
+        <input type="file" id="hideFile4">
+        
+        <label for="hideMessage">Enter a secret message:</label>
+        <textarea id="hideMessage" placeholder="Type your hidden message here..."></textarea>
+        
+        <label for="hidePassword">Enter a password for security:</label>
+        <input type="password" id="hidePassword" placeholder="Enter Password">
+        
+        <button onclick="hideFile()">Hide</button>
+        <a id="downloadHidden" class="hidden" download>Download Image</a>
+    </div>
+    
+    <div class="container">
+        <h3>Reveal File</h3>
+        <label for="revealImage">Select an image to extract the hidden files:</label>
+        <input type="file" id="revealImage" accept="image/*">
+        
+        <label for="revealPassword">Enter the password to unlock the files:</label>
+        <input type="password" id="revealPassword" placeholder="Enter Password">
+        
+        <button onclick="revealFile()">Reveal</button>
+    </div>
+    
+    <table id="fileList" class="hidden">
+        <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Size (Bytes)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <script src="script.js"></script>
+</body>
+</html>
